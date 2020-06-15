@@ -8,11 +8,12 @@
   <div class="row the_quote">
     <div class="col-md-12">
       <div *ngFor='let quote of quotes;let i=index' class="card quote_content">
-        <div class="card-body">
+        <div class="card-body quote_body">
           <p class="card-text">{{quote.quotename}}</p>
         </div>
-        <span class="card-subtitle mb-2">Posted by: <span id="name">{{quote.user}}</span><span id="date"><span
-              id="datecolor">{{quote.datePosted|date}}</span></span></span>
+        <div class="card-subtitle mb-2">Posted by: <span id="name">{{quote.user}}</span>
+          <div id="date">Posted On: <span id="datecolor">{{quote.datePosted|date}}</span></div>
+        </div>
         <div>
           <app-quote-details [quote]='quote' (isRead)='quoteDelete($event,i)'></app-quote-details>
         </div>
