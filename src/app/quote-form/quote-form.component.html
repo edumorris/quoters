@@ -1,16 +1,17 @@
-<div class="container-fluid">
-  <h2 class="heading">Quote</h2>
+<div class="quotes_form">
+  <h2 class="heading">Submit Quote</h2>
+  <hr>
   <form (ngSubmit)="addQuote()" #quotesForm='ngForm'>
 
     <div class="form-group">
-      <label for="quotename">Quote</label>
+      <label for="quotename">Quote:</label>
       <textarea class="form-control" id="quotename" rows="2" [(ngModel)]="newQuote.quotename" name="quotename"
-        #quotename='ngModel' placeholder="Enter quote here"></textarea>
+        #quotename='ngModel' placeholder="Enter quote here..."></textarea>
       <div [hidden]="user.valid || user.pristine" class="alert alert-danger"></div>
     </div>
 
     <div class="form-group">
-      <label for="author">Quote Author</label>
+      <label for="author">Quote Author:</label>
       <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author"
         #author='ngModel' placeholder="Enter authors name...">
       <div [hidden]="author.valid || author.pristine">
@@ -19,7 +20,7 @@
     </div>
 
     <div class="form-group">
-      <label for="user">Your Name</label>
+      <label for="user">Your Name:</label>
       <input type="text" required class="form-control" id="user" [(ngModel)]="newQuote.user" name="user" #user='ngModel'
         minlength="3" placeholder="Enter your name...">
       <div [hidden]="user.valid || user.pristine" class="alert alert-danger">
@@ -27,8 +28,8 @@
         {{newQuote.user}}
       </div>
     </div>
-
-
-    <button type="submit" class="btn btn-sm btn-success">Create Quote</button>
+    <div class="quote_submitter">
+      <button type="submit" class="btn btn-sm btn-success quote_submitter">Create Quote</button>
+    </div>
   </form>
 </div>

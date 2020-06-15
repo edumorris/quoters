@@ -1,0 +1,23 @@
+.quotes_form {
+    width: 80%;
+    position: relative;
+    margin: 50px auto;
+    border-radius: 25px;
+    background: #FF840030;
+    padding: 20px;
+}
+
+textarea, input {
+    background: #00000020;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.quote_submitter {
+    text-align: right;
+}
+
+.heading {
+    padding-top: 20px;
+    text-align: center;
+}
