@@ -35,9 +35,11 @@ export class QuoteComponent implements OnInit {
     quote.id = quoteLength + 1;
     quote.completeDate = new Date(quote.completeDate);
     this.quotes.push(quote);
-    }
+  }
 
-
+  displayInfo(index){
+    this.quotes[index].showInfo = !this.quotes[index].showInfo;
+  }
 
   constructor() { }
 
