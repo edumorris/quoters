@@ -9,15 +9,18 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote[] = [
-    new Quote(1, 'Love yourself first and everything else falls into line. You really have to love yourself to get anything done in this world. ',
-      'Lucille Ball ,', 'Billy Ayiera',
-      new Date(2020, 3, 6), 0, 0),
-    new Quote(2, 'Once the realization is accepted that even between the closest human beings infinite distances continue, a wonderful living side by side can grow, if they succeed in loving the distance between them which makes it possible for each to see the other whole against the sky.',
-      'Rainer Maria Rilke,', 'Billy Ayiera',
-      new Date(2020, 3, 6), 0, 0),
-    new Quote(3, 'When you adopt the viewpoint that there is nothing that exists that is not part of you, that there is no one who exists who is not part of you, that any judgment you make is self-judgment, that any criticism you level is self-criticism, you will wisely extend to yourself an unconditional love that will be the light of the world.',
-      'Harry Palmer,', 'Billy Ayiera',
-      new Date(2020, 3, 6), 0, 0),
+    new Quote(1, 'Men go abroad to wonder at the heights of mountains, at the huge waves of the sea, at the long courses of the rivers, at the vast compass of the ocean, at the circular motions of the stars, and they pass by themselves without wondering. ',
+      'Saint Augustie ,', 'Doreen Kinya',
+      new Date(2020, 1, 27), 25, 3),
+    new Quote(2, "Words are more powerful than some noises. Noises won't last long. Lyrics are so important, and people don't realise that.",
+      'Billie Eilish,', 'Clement Mwaki',
+      new Date(2020, 2, 6), 203, 1),
+    new Quote(3, 'My scientific studies have afforded me great gratification; and I am convinced that it will not be long before the whole world acknowledges the results of my work.',
+      'Gregor Mendel,', 'Nella Ndinda',
+      new Date(2019, 12, 29), 77, 50),
+    new Quote(4, "You know, if I listened to Michael Dukakis long enough, I would be convinced we're in an economic downturn and people are homeless and going without food and medical attention and that we've got to do something about the unemployed.",
+      'Ronald Regan,', 'Hassan Mohammed',
+      new Date(2019, 12, 29), 100, 20),
   ];
 
   quoteDelete(isRead, index) {
@@ -37,7 +40,7 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(quote);
   }
 
-  displayInfo(index){
+  displayInfo(index) {
     this.quotes[index].showInfo = !this.quotes[index].showInfo;
   }
 
