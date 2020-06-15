@@ -4,7 +4,7 @@
 # Project Description
 Angular IP project to display quotes added by user.
 ## Live URL
-    [Quoters](https://edumorris.github.io/quoters/)
+[Quoters](https://edumorris.github.io/quoters/)
 
 
 # Author
