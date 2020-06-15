@@ -1,68 +1,71 @@
 <div class="container-fluid">
-    <nav class="navbar fixed-top navbar-dark bg-primary">
-      <a class="navbar-brand" href="#!">Quoter</a>
-    </nav>
-  
-    <app-quote-form (addNew)="addNewQuote($event)"></app-quote-form>
-    <hr>
-    <div class="row">
-      <div class="col-md-12">
-        <div *ngFor='let quote of quotes;let i=index' class="card">
-          <div class="card-body">
-            <p class="card-text">{{quote.quotename}}</p>
-          </div>
-          <span class="card-subtitle mb-2">Posted by: <span id="name">{{quote.user}}</span><span id="date"><span id="datecolor">{{quote.datePosted|date}}</span></span></span>
-           <div>
-            <app-quote-details [quote]='quote' (isRead)='quoteDelete($event,i)'></app-quote-details>
-         </div>
+  <nav class="navbar fixed-top navbar-dark bg-primary">
+    <a class="navbar-brand" href="#!">Quoter</a>
+  </nav>
+
+  <app-quote-form (addNew)="addNewQuote($event)"></app-quote-form>
+  <hr>
+  <div class="row the_quote">
+    <div class="col-md-12">
+      <div *ngFor='let quote of quotes;let i=index' class="card quote_content">
+        <div class="card-body">
+          <p class="card-text">{{quote.quotename}}</p>
+        </div>
+        <span class="card-subtitle mb-2">Posted by: <span id="name">{{quote.user}}</span><span id="date"><span
+              id="datecolor">{{quote.datePosted|date}}</span></span></span>
+        <div>
+          <app-quote-details [quote]='quote' (isRead)='quoteDelete($event,i)'></app-quote-details>
         </div>
       </div>
-    
-   
-    <!-- Footer -->
-    <footer class="page-footer font-small teal pt-4 bg-primary">
-  
-      <!-- Footer Text -->
-      <div class="container-fluid text-center text-md-left">
-  
-        <!-- Grid row -->
-        <div class="row">
-  
-          <!-- Grid column -->
-          <div class="col-md-6 mt-md-0 mt-3">
-  
-            <!-- Content -->
-            <h5 class="text-uppercase font-weight-bold">Steve Jobs</h5>
-            <p>Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.</p>
-  
-          </div>
-          <!-- Grid column -->
-  
-          <hr class="clearfix w-100 d-md-none pb-3">
-  
-          <!-- Grid column -->
-          <div class="col-md-6 mb-md-0 mb-3">
-  
-            <!-- Content -->
-            <h5 class="text-uppercase font-weight-bold">Oprah Winfrey</h5>
-            <p>If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.</p>
-  
-          </div>
-          <!-- Grid column -->
-  
-        </div>
-        <!-- Grid row -->
-  
-      </div>
-      <!-- Footer Text -->
-  
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="#"> EM </a>
-      </div>
-      <!-- Copyright -->
-  
-    </footer>
-    <!-- Footer -->
+    </div>
   </div>
-  
+
+
+  <!-- Footer -->
+  <footer class="page-footer font-small teal pt-4 bg-primary">
+
+    <!-- Footer Text -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase font-weight-bold">Steve Jobs</h5>
+          <p>Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is
+            living with the results of other people's thinking.</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mb-md-0 mb-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase font-weight-bold">Oprah Winfrey</h5>
+          <p>If you look at what you have in life, you'll always have more. If you look at what you don't have in life,
+            you'll never have enough.</p>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Text -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="#"> EM </a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+</div>
